@@ -1,0 +1,71 @@
+body{
+  background-color: black;
+  text-align: center;
+  font-family: sans-serif;
+}
+
+label{
+  color: white;
+}
+
+h1{
+  color: white;
+}
+
+.controls{
+  margin-top: 50px;
+}
+
+.container{
+  position: relative;
+  width: 800px;
+  height: 300px;
+  
+  margin-left: auto;
+  margin-right: auto;
+  -webkit-perspective: 400px;
+  -moz-perspective: 400px;
+  -ms-perspective: 400px;
+  -o-perspective: 400px;
+  perspective: 400px;
+}
+
+#carousel{ 
+  position: absolute;
+  height: 30%;
+  width: 15%;
+  margin-left: 40%;
+  margin-top: 20%;
+  
+  color: black;
+  font-size: 80px;
+  text-align: center;
+  
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  -ms-transform-style: preserve-3d;
+  -o-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  
+}
+#carousel div{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  }
+
+.image{
+  background-color: cornflowerblue;
+  opacity: 0.7;
+  -webkit-transition: transform 1s;
+  -moz-transition: transform 1s;
+  -ms-transition: transform 1s;
+  -o-transition: transform 1s;
+  transition: transform 1s;
+}
+
+.image1{
+  background-image: url("https://s-media-cache-ak0.pinimg.com/originals/44/c5/f5/44c5f51abd7a5eede41d9b41bb8ddcff.jpg");
+  background-size: 100% 100%;
+  opacity: 1;
+}
