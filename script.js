@@ -20,9 +20,9 @@ function Carousel(id, imagecount, diameter){
   this.SetPanelPosition = function(val){
     this.Spin += val;
     for (var i = 0; i < this.ImageCount; i++){     
-      var X = Math.cos(toRadians(90 - ((i+this.Spin)*(360/this.ImageCount)))) * this.Diameter;
-      var Z = (Math.sin(toRadians(90- ((i+this.Spin)*(360/this.ImageCount)))) * this.Diameter) - this.Diameter;
-      var rot = (i+this.Spin) * (360/this.ImageCount);
+      var X = Math.round(Math.cos(toRadians(90 - ((i+this.Spin)*(360/this.ImageCount)))) * this.Diameter);
+      var Z = Math.round((Math.sin(toRadians(90- ((i+this.Spin)*(360/this.ImageCount)))) * this.Diameter) - this.Diameter);
+      var rot = Math.round((i+this.Spin) * (360/this.ImageCount));
       $(this.ID + ' .image'+(i+1)).css('transform', 'translateX('+X+'px) translateZ('+Z+'px) rotateY('+rot+'deg)');
     }
   }
